@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "449648980270",
+    "project_id": "cloud-notification-firebase",
+    "storage_bucket": "cloud-notification-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449648980270:android:4edf01c9dc7e7e0807cabf",
+        "android_client_info": {
+          "package_name": "com.lucascabral.cloudnotificationfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449648980270-4q1uroadpf44043a2put1jcbpt3pb4pf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxXQcH6fA-iJBGf_fK9B1prVuxFqcktSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449648980270-4q1uroadpf44043a2put1jcbpt3pb4pf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

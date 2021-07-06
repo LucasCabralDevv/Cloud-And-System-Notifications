@@ -1,0 +1,2 @@
+rootProject.name = "Cloud Notification Firebase"
+include ':app'
