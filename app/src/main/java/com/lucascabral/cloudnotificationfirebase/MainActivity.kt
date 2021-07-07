@@ -1,9 +1,8 @@
 package com.lucascabral.cloudnotificationfirebase
 
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
+import android.app.*
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -43,17 +42,23 @@ class MainActivity : AppCompatActivity() {
     private fun showNotificationListener() {
         val notificationManager = NotificationManagerCompat.from(this)
 
-        binding.mainShowNotification.setOnClickListener {
+        binding.mainShowNotificationButton.setOnClickListener {
             notificationManager.notify(NOTIFICATION_ID, buildNotification())
         }
     }
 
     private fun buildNotification(): Notification {
+        val intent = Intent(this, MainActivity::class.java)
+        val pendingIntent = TaskStackBuilder.create(this).run {
+            addNextIntentWithParentStack(intent)
+            getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT)
+        }
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("Content Title Notification")
             .setContentText("Content Text Notification")
             .setSmallIcon(R.drawable.ic_notifications)
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setPriority(NotificationCompat.PRIORITY_LOW)
+            .setContentIntent(pendingIntent)
             .build()
     }
 

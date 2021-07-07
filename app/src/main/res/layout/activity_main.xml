@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/mainShowNotification"
+        android:id="@+id/mainShowNotificationButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/show_notification_button_text"
